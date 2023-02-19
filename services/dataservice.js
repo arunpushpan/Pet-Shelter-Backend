@@ -195,44 +195,6 @@ const deleteItemWishlist = (id)=>{
 }
 
 
-// // Rehome registration
-// const rehome = (uname, email,phno,address,breed,age,gender,photo,rstatus) => {
-//     // check phno is in mongodb 
-//     return db.Contact.findOne({
-//         phno
-//     }).then((result) => {
-//         console.log(result);
-//         if (result) {
-
-//             // if phno already exists
-//             return {
-//                 statusCode: 401,
-//                 message: 'You have to wait until your previous application is accepted'
-//             }
-//         }
-       
-        
-//         else {
-//             // add new registeration
-//             const newContact = new db.Contact({
-//                 username:uname,
-//   email:email,
-//   phno:phno,
-//   address:address,
-//   breed:breed,
-//   age:age,
-//   gender:gender,
-//   photo:photo,
-//   rstatus:rstatus
-//             })
-//             newContact.save()
-//             return {
-//                 statusCode: 200,
-//                 message: 'Request Submitted successfully'
-//             }
-//         }
-//     })
-// }
 
 
 // Rehome registration
@@ -441,7 +403,6 @@ const updatestatus = (_id,rstatus)=>{
 
 
 
-
 module.exports = {
    login,
    register, 
@@ -455,7 +416,7 @@ module.exports = {
    savepet,
    getuserapps,
    deleteuserapp,
-   updatestatus  
+   updatestatus
    
    
 }
